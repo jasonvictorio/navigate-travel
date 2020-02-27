@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 
 export class Product extends Component {
   render() {
+    const { priceWithDiscount, price, status } = this.props.product
+
     return (
       <div>
-        { this.props.product.priceWithDiscount }
-        { this.props.product.price }
-        { this.props.product.status }
+        { priceWithDiscount }
+        { price }
+        { status }
       </div>
     )
   }

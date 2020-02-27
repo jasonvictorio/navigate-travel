@@ -3,12 +3,14 @@ import Product from './Product'
 
 export class Day extends Component {
   render() {
+    const { dateText, dateDay, temperature, products } = this.props.day
+
     return (
       <div>
-        { this.props.day.dateText }
-        ({ this.props.day.dateDay })
-        { this.props.day.temperature }
-        <Products products={this.props.day.products} />
+        { dateText }
+        { dateDay }
+        { temperature }
+        <Products products={products} />
       </div>
     )
   }
