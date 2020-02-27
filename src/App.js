@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Day from './components/Day'
 
 export class App extends Component {
   API = 'https://frontend-navigatetravel.ntstage.com/api';
@@ -18,6 +19,7 @@ export class App extends Component {
     return (
       <div>
         app
+        <Day />
       </div>
     )
   }
