@@ -4,7 +4,9 @@ export class Product extends Component {
   render() {
     return (
       <div>
-        product component
+        { this.props.product.priceWithDiscount }
+        { this.props.product.price }
+        { this.props.product.status }
       </div>
     )
   }

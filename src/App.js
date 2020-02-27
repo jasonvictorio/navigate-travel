@@ -18,11 +18,14 @@ export class App extends Component {
   render () {
     return (
       <div>
-        app
-        <Day />
+        <Days days={this.state.days} />
       </div>
     )
   }
+}
+
+function Days (props) {
+  return props.days.map(day => (<Day key={day.date} day={day} />))
 }
 
 export default App
