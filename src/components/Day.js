@@ -6,13 +6,38 @@ export class Day extends Component {
     const { dateText, dateDay, temperature, products } = this.props.day
 
     return (
-      <div>
-        { dateText }
-        { dateDay }
-        { temperature }
-        <Products products={products} />
+      <div style={this.styles.day}>
+        <div style={this.styles.date}>
+          <span>{ dateText }</span>
+          <span>{ dateDay }</span>
+        </div>
+        <div style={this.styles.temperature}>
+          { temperature }
+        </div>
+        <div style={this.styles.products}>
+          <Products products={products} />
+        </div>
       </div>
     )
+  }
+
+  styles = {
+    day: {
+    },
+    date: {
+      color: '#A5A6A6',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    temperature: {
+      color: '#FFFFFF',
+      backgroundColor: '#E34B31',
+      borderRadius: '5px',
+      textAlign: 'center',
+    },
+    products: {
+    },
   }
 }
 

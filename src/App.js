@@ -18,9 +18,17 @@ export class App extends Component {
   render () {
     return (
       <div>
-        <Days days={this.state.days} />
+        <div style={this.styles.days}>
+          <Days days={this.state.days} />
+        </div>
       </div>
     )
+  }
+
+  styles = {
+    days: {
+      display: 'flex',
+    }
   }
 }
 
