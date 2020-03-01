@@ -18,6 +18,43 @@ code {
   padding: 50px 50px;
 }
 
+.logo {
+  text-transform: uppercase;
+  color: #EF0058;
+  font-size: 44px;
+  font-weight: bold;
+  letter-spacing: 12px;
+  max-width: 240px;
+  line-height: 1.2;
+}
+
+.categories {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.category {
+  height: 132px;
+  background-color: blue;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  color: #F2FF3E;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: url(/ship.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  font-size: 24px;
+  width: 310px;
+}
+
+.category-label {
+  padding-left: 22px;
+  padding-bottom: 10px;
+}
 
 .sliderContainer {
   display: flex;

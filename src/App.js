@@ -30,6 +30,26 @@ export class App extends Component {
   render () {
     return (
       <div className="app">
+        <div className="sidebar">
+          <div className="logo">Our Prices&deg;</div>
+          <ul className="categories">
+            <li className="category">
+              <div className="category-label">
+                Premier
+              </div>
+            </li>
+            <li className="category">
+              <div className="category-label">
+                Premier Plus
+              </div>
+             </li>
+            <li className="category">
+              <div className="category-label">
+                Catamaran
+              </div>
+            </li>
+          </ul>
+        </div>
         <div className="sliderContainer">
           <button className="previous" onClick={() => this.slider.slickPrev()}></button>
           <Slider className="slider" ref={slider => (this.slider = slider)} {...this.sliderSettings}>
