@@ -23,6 +23,7 @@ export class Day extends Component {
 
   styles = {
     day: {
+      padding: '0 5px',
     },
     date: {
       color: '#A5A6A6',
