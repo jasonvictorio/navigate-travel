@@ -16,6 +16,7 @@ export class App extends Component {
     arrows: false,
     appendDots: false,
     infinite: false,
+    draggable: false,
   }
 
   async componentDidMount () {
@@ -28,7 +29,7 @@ export class App extends Component {
 
   render () {
     return (
-      <div>
+      <div style={this.styles.app}>
         <div style={this.styles.sliderContainer}>
           <button style={this.styles.previous} onClick={() => this.slider.slickPrev()}></button>
           <Slider style={this.styles.slider} ref={slider => (this.slider = slider)} {...this.sliderSettings}>
@@ -41,6 +42,9 @@ export class App extends Component {
   }
 
   styles = {
+    app: {
+      padding: '50px 50px',
+    },
     sliderContainer: {
       display: 'flex',
     },

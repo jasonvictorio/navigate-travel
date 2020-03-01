@@ -34,6 +34,8 @@ export class Product extends Component {
       borderTopRightRadius: '20px',
       border: '1px solid #DDDDDD',
       borderBottom: '1px dashed #DDDDDD',
+      paddingTop: '14px',
+      paddingBottom: '16px',
     },
     stubBottom: {
       textAlign: 'center',
@@ -44,12 +46,20 @@ export class Product extends Component {
         : '1px solid #DDDDDD',
       borderTop: 'none',
       color: this.statusColor[this.props.product.status],
+      marginBottom: '32px',
+      paddingTop: '5px',
+      paddingBottom: '10px',
     },
     discount: {
       color: '#A5A5A5',
+      textDecoration: 'line-through',
+      fontSize: '20px',
+      marginBottom: '2px',
+      minHeight: '26px',
     },
     price: {
       color: '#F40058',
+      fontSize: '26px',
     }
   }
 

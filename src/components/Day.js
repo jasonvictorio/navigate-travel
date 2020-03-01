@@ -9,7 +9,7 @@ export class Day extends Component {
       <div style={this.styles.day}>
         <div style={this.styles.date}>
           <span>{ dateText }</span>
-          <span>{ dateDay }</span>
+          <span>({ dateDay })</span>
         </div>
         <div style={this.styles.temperature}>
           { temperature }
@@ -30,12 +30,18 @@ export class Day extends Component {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      fontSize: '18px',
+      marginBottom: '24px',
     },
     temperature: {
       color: '#FFFFFF',
       backgroundColor: '#E34B31',
-      borderRadius: '5px',
+      borderRadius: '12px',
       textAlign: 'center',
+      fontSize: '20px',
+      fontWeight: 'bolder',
+      padding: '3px',
+      marginBottom: '30px',
     },
     products: {
     },
