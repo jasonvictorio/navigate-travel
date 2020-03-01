@@ -29,7 +29,7 @@ export class Product extends Component {
 
   styles = {
     stubBottom: {
-      border: this.props.product.status == 'Sold Out'
+      border: this.props.product.status === 'Sold Out'
         ? 'none'
         : '1px solid #DDDDDD',
       color: this.statusColor[this.props.product.status],
