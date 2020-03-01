@@ -1,9 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # How to run
-1. `npm install`
-1. `npm build`
-1. `npm serve`
+1. `npm run install`
+1. `npm run build`
+1. `npm run serve`
 
 <br />
 
