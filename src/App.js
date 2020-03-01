@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import Day from './components/Day'
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 export class App extends Component {
   API = 'https://frontend-navigatetravel.ntstage.com/api';
   state = {
     days: [],
   };
+
+  sliderSettings = {
+    slidesToShow: 8,
+    slidesToScroll: 8,
+  }
 
   async componentDidMount () {
     // let response = await fetch('https://frontend-navigatetravel.ntstage.com/api');
@@ -18,22 +26,15 @@ export class App extends Component {
   render () {
     return (
       <div>
-        <div style={this.styles.days}>
-          <Days days={this.state.days} />
-        </div>
+        <Slider {...this.sliderSettings}>
+          { this.state.days.map(day => (<Day key={day.date} day={day} />))}
+        </Slider>
       </div>
     )
   }
 
   styles = {
-    days: {
-      display: 'flex',
-    }
   }
-}
-
-function Days (props) {
-  return props.days.map(day => (<Day key={day.date} day={day} />))
 }
 
 export default App
