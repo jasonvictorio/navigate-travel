@@ -6,45 +6,19 @@ export class Day extends Component {
     const { dateText, dateDay, temperature, products } = this.props.day
 
     return (
-      <div style={this.styles.day}>
-        <div style={this.styles.date}>
+      <div className="day">
+        <div className="date">
           <span>{ dateText }</span>
           <span>({ dateDay })</span>
         </div>
-        <div style={this.styles.temperature}>
+        <div className="temperature">
           { temperature }
         </div>
-        <div style={this.styles.products}>
+        <div className="products">
           <Products products={products} />
         </div>
       </div>
     )
-  }
-
-  styles = {
-    day: {
-      padding: '0 5px',
-    },
-    date: {
-      color: '#A5A6A6',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      fontSize: '18px',
-      marginBottom: '24px',
-    },
-    temperature: {
-      color: '#FFFFFF',
-      backgroundColor: '#E34B31',
-      borderRadius: '12px',
-      textAlign: 'center',
-      fontSize: '20px',
-      fontWeight: 'bolder',
-      padding: '3px',
-      marginBottom: '30px',
-    },
-    products: {
-    },
   }
 }
 

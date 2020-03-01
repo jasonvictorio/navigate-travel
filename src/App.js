@@ -29,44 +29,16 @@ export class App extends Component {
 
   render () {
     return (
-      <div style={this.styles.app}>
-        <div style={this.styles.sliderContainer}>
-          <button style={this.styles.previous} onClick={() => this.slider.slickPrev()}></button>
-          <Slider style={this.styles.slider} ref={slider => (this.slider = slider)} {...this.sliderSettings}>
+      <div className="app">
+        <div className="sliderContainer">
+          <button className="previous" onClick={() => this.slider.slickPrev()}></button>
+          <Slider className="slider" ref={slider => (this.slider = slider)} {...this.sliderSettings}>
             { this.state.days.map(day => (<Day key={day.date} day={day} />))}
           </Slider>
-          <button style={this.styles.next} onClick={() => this.slider.slickNext()}></button>
+          <button className="next" onClick={() => this.slider.slickNext()}></button>
         </div>
       </div>
     )
-  }
-
-  styles = {
-    app: {
-      padding: '50px 50px',
-    },
-    sliderContainer: {
-      display: 'flex',
-    },
-    slider: {
-      width: '1040px',
-    },
-    previous: {
-      backgroundColor: 'transparent',
-      width: '0',
-      height: '0',
-      borderStyle: 'solid',
-      borderWidth: '12px 15px 12px 0',
-      borderColor: 'transparent #DDDDDD transparent transparent',
-    },
-    next: {
-      backgroundColor: 'transparent',
-      width: '0',
-      height: '0',
-      borderStyle: 'solid',
-      borderWidth: '12px 0 12px 15px',
-      borderColor: 'transparent transparent transparent #DDDDDD',
-    },
   }
 }
 
